@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mostrar años Mundiales</title>
+	<script type="text/javascript">
+		
+		function saltarLineas(){
+			document.write("<br><br><br>")
+		}
+		function imprimir(frase) {
+			document.write(frase);
+			saltarLineas();
+		}
+
+		var tabla = parseInt(prompt("Ingrese la tabla de multiplicar que quiere calcular"))
+
+		for (var i = 1; i <= 10; i++) {
+			imprimir(`${tabla} x ${i} = ${tabla*i}`);
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

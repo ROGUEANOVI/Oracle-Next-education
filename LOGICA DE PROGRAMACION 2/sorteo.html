@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sorteo </title>
+	<script type="text/javascript">
+		
+		function saltarLineas(){
+			document.write("<br><br><br>")
+		}
+		function imprimir(frase) {
+			document.write(frase);
+			saltarLineas();
+		}
+		function sortea(n) {
+			return Math.round(Math.random() * n);
+		}
+
+		var n = parseInt(prompt("Ingrese el numero maximo del rango del sorteo: "));
+		var numeroAsertado = sortea(n);
+		var numeroIngresado = parseInt(prompt("Ingrese el un numero: "));  
+		
+		if (numeroIngresado == numeroAsertado){
+			saltarLineas();
+			imprimir("Felicidades adivinaste el numero correcto es " + numeroAsertado);
+		}
+		else{
+			if (numeroIngresado > numeroAsertado) {
+				saltarLineas();
+				imprimir("Fallaste ingresaste un numero mayor, el numero correcto es " + numeroAsertado);
+			}
+			else{
+				saltarLineas();
+				imprimir("Fallaste ingresaste un numero menor, el numero correcto es " + numeroAsertado);
+			}
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
