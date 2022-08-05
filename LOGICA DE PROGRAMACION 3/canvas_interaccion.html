@@ -1,0 +1,27 @@
+
+
+<meta charset="utf-8">
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "gray";
+	pincel.fillRect(0, 0, 600, 400);
+	
+	function mostrarAlerta() {
+		alert("Usted hizo clic");
+	}
+
+	function cambiarColor(){
+		pincel.fillStyle = "red";
+		pincel.fillRect(0, 0, 600, 400);
+	}
+	
+	pantalla.ondblclick = cambiarColor;
+	// pantalla.onclick = mostrarAlerta;
+	
+
+</script>

@@ -7,10 +7,12 @@
 <button>Verificar</button>
 
 <script type="text/javascript">
-	
-	var numeroSecreto = 5;
+
+	var numeroSecreto = Math.round(Math.random()*5);
 	var input = document.querySelector('input');
 	var button = document.querySelector('button');
+
+	input.focus();
 
 	function verificar() {
 		if (parseInt(input.value) == numeroSecreto) {
@@ -19,12 +21,11 @@
 		else{
 			alert("Usted erró")
 		}
-		
+		input.value = "";
+		input.focus();
+
 	}
 
 	button.onclick = verificar;
-
-
-
 
 </script>
